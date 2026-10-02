@@ -19,439 +19,532 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f5eadc;
+            background: #f8efe3;
             color: #4b2e1f;
-            line-height: 1.6;
+            overflow-x: hidden;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            background: #35190e;
+            background: linear-gradient(135deg, #6b3e26, #9b5c35);
             color: white;
             text-align: center;
-            padding: 25px 20px;
+            padding: 45px 20px;
+            animation: headerIn 1s ease-out;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 42px;
+            margin-bottom: 10px;
+            animation: popIn 1s ease-out;
         }
 
         header p {
-            font-size: 17px;
-            margin-top: 5px;
+            font-size: 18px;
+            animation: fadeIn 1.4s ease-out;
         }
 
+        /* =========================
+           NAVIGATIE
+        ========================= */
+
         nav {
-            background: #5a2d19;
-            text-align: center;
-            padding: 15px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            background: #fffaf4;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 10px;
+            color: #6b3e26;
             font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            color: #f2c078;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-
-            background:
-                linear-gradient(
-                    rgba(45, 22, 12, 0.55),
-                    rgba(45, 22, 12, 0.55)
-                ),
-                url("https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1600&q=85");
-
-            background-size: cover;
-            background-position: center;
+            background: #6b3e26;
             color: white;
+            transform: translateY(-3px) scale(1.05);
         }
 
-        .hero-content {
-            max-width: 1000px;
-            width: 100%;
-            margin: auto;
-            padding: 60px 30px;
-        }
-
-        .hero h2 {
-            font-size: 52px;
-            max-width: 650px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 21px;
-            max-width: 550px;
-            margin-bottom: 30px;
-        }
-
-        .hero-button {
-            display: inline-block;
-            background: #d99a50;
-            color: white;
-            padding: 15px 28px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .hero-button:hover {
-            background: #c4833c;
-        }
-
-        /* ALGEMEEN */
+        /* =========================
+           ALGEMENE SECTIES
+        ========================= */
 
         section {
             max-width: 1100px;
-            margin: 45px auto;
-            padding: 0 25px;
+            margin: auto;
+            padding: 70px 20px;
         }
 
         section h2 {
             text-align: center;
             font-size: 32px;
+            margin-bottom: 35px;
+            color: #6b3e26;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: none;
+            min-height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(rgba(70,35,20,0.55), rgba(70,35,20,0.55)),
+                url("https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            animation: heroZoom 1.5s ease-out;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: heroText 1.2s ease-out;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 21px;
             margin-bottom: 30px;
         }
 
-        /* VERS GEBAKKEN */
-
-        .fresh-section {
-            background: #fffaf4;
-            border-radius: 25px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        .hero-button {
+            display: inline-block;
+            background: #fff;
+            color: #6b3e26;
+            text-decoration: none;
+            padding: 15px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
-        .fresh-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 18px;
+        .hero-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        .fresh-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .fresh-card {
-            background: #f5eadc;
-            border-radius: 18px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .fresh-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .fresh-card h3 {
-            margin-bottom: 8px;
-            font-size: 20px;
-        }
-
-        /* COOKIES */
+        /* =========================
+           COOKIE CARDS
+        ========================= */
 
         .cookie-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
         }
 
         .cookie-card {
             background: white;
             border-radius: 20px;
-            padding: 18px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: cardAppear 0.8s ease both;
         }
 
-        .cookie-image {
+        .cookie-card:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .cookie-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .cookie-card:hover {
+            transform: translateY(-12px) rotate(-1deg);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+        }
+
+        .cookie-card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
+            transition: transform 0.5s ease;
         }
 
-        .cookie-card h3 {
+        .cookie-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .cookie-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cookie-info h3 {
             font-size: 23px;
             margin-bottom: 8px;
         }
 
-        .cookie-card p {
-            font-size: 15px;
-        }
-
         .price {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            color: #8b4513;
-            margin: 15px 0;
+            color: #a45b32;
         }
 
-        /* COOKIEBOXEN */
+        /* =========================
+           VERS GEBAKKEN
+        ========================= */
 
-        .box-section {
-            background: #fffaf4;
+        .fresh {
+            background: #fff8ef;
             border-radius: 25px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
         }
 
-        .box-intro {
+        .fresh-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 18px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: all 0.35s ease;
         }
+
+        .fresh-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 25px rgba(0,0,0,0.15);
+        }
+
+        .fresh-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            animation: cookieBounce 2.5s infinite;
+        }
+
+        /* =========================
+           COOKIEBOXEN
+        ========================= */
 
         .box-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 25px;
         }
 
         .box-card {
-            background: #f5eadc;
-            border-radius: 20px;
+            background: #fff;
             padding: 30px 20px;
             text-align: center;
-            border: 2px solid #ead8c7;
+            border-radius: 20px;
+            box-shadow: 0 7px 18px rgba(0,0,0,0.1);
+            transition: all 0.35s ease;
         }
 
-        .box-icon {
-            font-size: 60px;
-            margin-bottom: 10px;
+        .box-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
         .box-card h3 {
-            font-size: 25px;
-            margin-bottom: 8px;
-        }
-
-        .box-card p {
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
         .box-price {
-            font-size: 25px;
+            font-size: 22px;
             font-weight: bold;
-            color: #8b4513;
+            color: #a45b32;
         }
 
-        /* BESTELLEN */
+        /* =========================
+           BESTELFORMULIER
+        ========================= */
 
         .order-box {
             background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            max-width: 800px;
-            margin: auto;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
-        .order-item {
-            background: #fffaf4;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border: 1px solid #ead8c7;
+        .order-group {
+            margin-bottom: 25px;
         }
 
-        .order-item h3 {
-            margin-bottom: 5px;
-        }
-
-        .order-price {
-            color: #8b4513;
-            font-weight: bold;
-        }
-
-        .order-divider {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 35px 0 20px;
+        .order-group h3 {
+            margin-bottom: 12px;
             color: #6b3e26;
         }
 
         label {
             display: block;
+            margin-top: 10px;
             font-weight: bold;
-            margin-top: 16px;
-            margin-bottom: 6px;
         }
 
         input {
             width: 100%;
-            padding: 14px;
-            border: 2px solid #dbc7b5;
+            padding: 12px;
+            margin-top: 5px;
+            border: 2px solid #ead9c8;
             border-radius: 10px;
             font-size: 16px;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
         }
 
         input:focus {
             outline: none;
-            border-color: #8b5a3c;
+            border-color: #9b5c35;
+            box-shadow: 0 0 0 4px rgba(155,92,53,0.12);
         }
 
-        /* BOX KEUZES */
-
-        .box-choice {
-            background: white;
-            border: 2px solid #dbc7b5;
-            border-radius: 15px;
-            padding: 18px;
-            margin-top: 15px;
-        }
-
-        .box-choice h4 {
-            font-size: 19px;
-            margin-bottom: 12px;
-        }
-
-        .choice-row {
+        .quantity-row {
             display: grid;
-            grid-template-columns: 1fr 90px;
+            grid-template-columns: 1fr 100px;
+            gap: 15px;
             align-items: center;
-            gap: 10px;
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
-        .choice-row input {
-            padding: 10px;
+        .quantity-row input {
+            margin: 0;
         }
 
-        .box-counter {
+        .box-selection {
+            background: #fff8ef;
+            padding: 18px;
+            border-radius: 15px;
             margin-top: 15px;
-            padding: 12px;
-            border-radius: 10px;
-            text-align: center;
+            border: 1px solid #ead9c8;
+        }
+
+        .box-status {
             font-weight: bold;
-            background: #f5eadc;
+            margin-top: 10px;
         }
 
-        .box-counter.ok {
-            background: #dff5e5;
-            color: #18733a;
-        }
-
-        .box-counter.error {
-            background: #ffe2df;
-            color: #a3291e;
-        }
+        /* =========================
+           TOTAAL
+        ========================= */
 
         .total {
-            background: #f5eadc;
-            padding: 18px;
-            border-radius: 12px;
-            margin: 25px 0;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f5e3d1;
+            border-radius: 15px;
             text-align: center;
-            font-size: 25px;
+            font-size: 26px;
             font-weight: bold;
+            animation: pulseSoft 2s infinite;
         }
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================= */
 
         .whatsapp-button {
             width: 100%;
+            border: none;
+            margin-top: 20px;
+            padding: 17px;
+            border-radius: 30px;
             background: #25D366;
             color: white;
-            border: none;
-            padding: 17px;
-            border-radius: 10px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
+            transition: all 0.3s ease;
+            animation: buttonPulse 2.5s infinite;
         }
 
         .whatsapp-button:hover {
-            background: #1ebe5d;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(37,211,102,0.35);
         }
 
-        /* OPHALEN */
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+        /* =========================
+           OPHALEN / CONTACT
+        ========================= */
 
         .info-box {
-            background: #fffaf4;
-            padding: 25px;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-        }
-
-        .info-icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        .info-box h3 {
-            margin-bottom: 8px;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            background: #fffaf4;
-            padding: 35px;
+            background: white;
+            padding: 30px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
         }
 
-        .contact-button {
-            display: inline-block;
-            background: #6b3e26;
-            color: white;
-            padding: 13px 28px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
+        .info-box:hover {
+            transform: translateY(-7px);
         }
 
-        /* FOOTER */
+        .info-box p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: #35190e;
+            background: #4b2e1f;
             color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 35px 20px;
+            margin-top: 30px;
         }
 
-        /* MOBIEL */
+        /* =========================
+           SCROLL ANIMATIES
+        ========================= */
 
-        @media (max-width: 800px) {
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
 
-            header h1 {
-                font-size: 30px;
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           ANIMATIES
+        ========================= */
+
+        @keyframes headerIn {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
             }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 6px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            80% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heroZoom {
+            from {
+                transform: scale(1.08);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes heroText {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cookieBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes pulseSoft {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.015);
+            }
+        }
+
+        @keyframes buttonPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 rgba(37,211,102,0);
+            }
+
+            50% {
+                box-shadow: 0 0 18px rgba(37,211,102,0.25);
+            }
+        }
+
+        /* =========================
+           MOBIEL
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
             }
 
             .hero {
@@ -459,30 +552,24 @@
             }
 
             .hero h2 {
-                font-size: 38px;
+                font-size: 36px;
             }
 
             .hero p {
                 font-size: 18px;
             }
 
-            .fresh-grid,
-            .cookie-grid,
-            .box-grid,
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
             section {
-                padding: 0 15px;
+                padding: 50px 15px;
             }
 
-            .order-box {
-                padding: 25px;
-            }
-
-            .choice-row {
+            .quantity-row {
                 grid-template-columns: 1fr 80px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 8px 10px;
             }
         }
     </style>
@@ -490,316 +577,252 @@
 
 <body>
 
-<header>
-    <h1>🍪 Jayden's Cookies</h1>
-    <p>Verse, lekkere cookies speciaal voor jou!</p>
-</header>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
+    <header>
+        <h1>🍪 Jayden's Cookies</h1>
+        <p>Verse, lekkere cookies speciaal voor jou!</p>
+    </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#vers">Vers gebakken</a>
-    <a href="#cookies">Cookies</a>
-    <a href="#boxen">Cookieboxen</a>
-    <a href="#bestellen">Bestellen</a>
-    <a href="#ophalen">Ophalen</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- =========================
+         NAVIGATIE
+    ========================= -->
 
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#vers">Vers gebakken</a>
+        <a href="#cookies">Cookies</a>
+        <a href="#boxen">Cookieboxen</a>
+        <a href="#bestellen">Bestellen</a>
+        <a href="#ophalen">Ophalen</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<!-- HOME -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
-<section id="home" class="hero">
+    <section class="hero" id="home">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <h2>
-            Heerlijke cookies, vers voor jou! 🍪
-        </h2>
+            <h2>De lekkerste cookies 🍪</h2>
 
-        <p>
-            Met liefde gebakken en klaar om opgehaald te worden.
-        </p>
+            <p>
+                Vers gebakken cookies met heerlijke stukjes chocolade,
+                Smarties en nog veel meer lekkers!
+            </p>
 
-        <a href="#bestellen" class="hero-button">
-            Bestel nu jouw cookies! 🍪
-        </a>
+            <a class="hero-button" href="#bestellen">
+                🛒 Bestel jouw cookies
+            </a>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
+    <!-- =========================
+         VERS GEBAKKEN
+    ========================= -->
 
-<!-- VERS GEBAKKEN -->
-
-<section id="vers">
-
-    <div class="fresh-section">
+    <section id="vers" class="reveal">
 
         <h2>🔥 Vers gebakken</h2>
 
-        <p class="fresh-intro">
-            Elke cookie wordt vers gebakken en met zorg gemaakt,
-            zodat jij een lekkere cookie krijgt die speciaal voor
-            jouw bestelling is gemaakt. 🍪
-        </p>
-
-        <div class="fresh-grid">
+        <div class="cookie-grid">
 
             <div class="fresh-card">
-                <div class="fresh-icon">🔥</div>
-                <h3>Vers gebakken</h3>
-                <p>Onze cookies worden vers gebakken.</p>
+                <div class="fresh-icon">🍪</div>
+                <h3>Vers uit de oven</h3>
+                <p>
+                    Onze cookies worden vers gebakken voor jouw bestelling.
+                </p>
+            </div>
+
+            <div class="fresh-card">
+                <div class="fresh-icon">🍫</div>
+                <h3>Vol met lekkers</h3>
+                <p>
+                    Heerlijke chocolade en andere lekkere toppings.
+                </p>
             </div>
 
             <div class="fresh-card">
                 <div class="fresh-icon">❤️</div>
-                <h3>Met zorg gemaakt</h3>
-                <p>We maken iedere bestelling met aandacht.</p>
-            </div>
-
-            <div class="fresh-card">
-                <div class="fresh-icon">📦</div>
-                <h3>Klaar om op te halen</h3>
-                <p>Jouw bestelling staat klaar op de afgesproken tijd.</p>
+                <h3>Met liefde gemaakt</h3>
+                <p>
+                    Elke cookie wordt met aandacht en plezier gemaakt.
+                </p>
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- =========================
+         COOKIES
+    ========================= -->
 
+    <section id="cookies" class="reveal">
 
-<!-- COOKIES -->
+        <h2>🍪 Onze Cookies</h2>
 
-<section id="cookies">
+        <div class="cookie-grid">
 
-    <h2>🍪 Onze Cookies</h2>
+            <div class="cookie-card">
 
-    <div class="cookie-grid">
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
+                    alt="Chocolate Chip Cookie"
+                >
 
-        <div class="cookie-card">
+                <div class="cookie-info">
+                    <h3>Chocolate Chip</h3>
+                    <p>Een heerlijke klassieke cookie met chocolate chips.</p>
+                    <p class="price">€1,50</p>
+                </div>
 
-            <img
-                class="cookie-image"
-                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
-                alt="Chocolate Chip Cookie"
-            >
+            </div>
 
-            <h3>Chocolate Chip</h3>
+            <div class="cookie-card">
 
-            <p>
-                Een zachte cookie met heerlijke stukjes chocolade.
-            </p>
+                <img
+                    src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
+                    alt="Smarties Cookie"
+                >
 
-            <div class="price">
-                €1,50
+                <div class="cookie-info">
+                    <h3>🌈 Smarties Cookie</h3>
+                    <p>Een vrolijke cookie met heerlijke Smarties.</p>
+                    <p class="price">€1,50</p>
+                </div>
+
+            </div>
+
+            <div class="cookie-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
+                    alt="Double Chocolate Cookie"
+                >
+
+                <div class="cookie-info">
+                    <h3>🍫 Double Chocolate</h3>
+                    <p>Extra chocolade voor echte chocoladeliefhebbers.</p>
+                    <p class="price">€1,75</p>
+                </div>
+
             </div>
 
         </div>
 
+    </section>
 
-        <div class="cookie-card">
+    <!-- =========================
+         COOKIEBOXEN
+    ========================= -->
 
-            <img
-                class="cookie-image"
-                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
-                alt="Smarties Cookie"
-            >
-
-            <h3>Smarties Cookie</h3>
-
-            <p>
-                Een lekkere cookie met vrolijke Smarties.
-            </p>
-
-            <div class="price">
-                €1,50
-            </div>
-
-        </div>
-
-
-        <div class="cookie-card">
-
-            <img
-                class="cookie-image"
-                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
-                alt="Double Chocolate Cookie"
-            >
-
-            <h3>Double Chocolate</h3>
-
-            <p>
-                Een extra chocoladecookie voor echte chocoladeliefhebbers.
-            </p>
-
-            <div class="price">
-                €1,75
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- COOKIEBOXEN -->
-
-<section id="boxen">
-
-    <div class="box-section">
+    <section id="boxen" class="reveal">
 
         <h2>📦 Cookieboxen</h2>
-
-        <p class="box-intro">
-            Kies een box en bepaal zelf welke cookies erin komen! 🍪
-        </p>
 
         <div class="box-grid">
 
             <div class="box-card">
-                <div class="box-icon">📦</div>
                 <h3>Box van 4</h3>
-                <p>4 cookies naar keuze.</p>
-                <div class="box-price">€5,50</div>
+                <p>4 cookies naar keuze</p>
+                <p class="box-price">€5,50</p>
             </div>
 
             <div class="box-card">
-                <div class="box-icon">📦</div>
                 <h3>Box van 6</h3>
-                <p>6 cookies naar keuze.</p>
-                <div class="box-price">€8,00</div>
+                <p>6 cookies naar keuze</p>
+                <p class="box-price">€8,00</p>
             </div>
 
             <div class="box-card">
-                <div class="box-icon">🎁</div>
                 <h3>Box van 10</h3>
-                <p>10 cookies naar keuze.</p>
-                <div class="box-price">€13,00</div>
+                <p>10 cookies naar keuze</p>
+                <p class="box-price">€13,00</p>
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- =========================
+         BESTELLEN
+    ========================= -->
 
+    <section id="bestellen" class="reveal">
 
-<!-- BESTELLEN -->
+        <h2>🛒 Bestel jouw cookies</h2>
 
-<section id="bestellen">
+        <div class="order-box">
 
-    <h2>🛒 Bestel jouw Cookies</h2>
+            <!-- LOSSE COOKIES -->
 
-    <div class="order-box">
+            <div class="order-group">
 
+                <h3>🍪 Losse cookies</h3>
 
-        <!-- LOSSE COOKIES -->
+                <div class="quantity-row">
+                    <label>Chocolate Chip</label>
+                    <input
+                        type="number"
+                        id="chocolateChip"
+                        min="0"
+                        value="0"
+                        oninput="berekenTotaal()"
+                    >
+                </div>
 
-        <div class="order-item">
+                <div class="quantity-row">
+                    <label>Smarties Cookie</label>
+                    <input
+                        type="number"
+                        id="smarties"
+                        min="0"
+                        value="0"
+                        oninput="berekenTotaal()"
+                    >
+                </div>
 
-            <h3>🍪 Chocolate Chip</h3>
+                <div class="quantity-row">
+                    <label>Double Chocolate</label>
+                    <input
+                        type="number"
+                        id="doubleChocolate"
+                        min="0"
+                        value="0"
+                        oninput="berekenTotaal()"
+                    >
+                </div>
 
-            <p>
-                <span class="order-price">€1,50</span> per cookie
-            </p>
+            </div>
 
-            <label for="chocolateChip">
-                Aantal
-            </label>
+            <!-- BOX 4 -->
 
-            <input
-                type="number"
-                id="chocolateChip"
-                min="0"
-                value="0"
-                oninput="berekenTotaal()"
-            >
+            <div class="order-group">
 
-        </div>
+                <h3>📦 Box van 4 — €5,50</h3>
 
+                <input
+                    type="number"
+                    id="box4"
+                    min="0"
+                    value="0"
+                    oninput="updateBox4()"
+                    placeholder="Aantal boxen"
+                >
 
-        <div class="order-item">
+                <div class="box-selection">
 
-            <h3>🌈 Smarties Cookie</h3>
+                    <p><strong>Welke cookies wil je?</strong></p>
 
-            <p>
-                <span class="order-price">€1,50</span> per cookie
-            </p>
-
-            <label for="smarties">
-                Aantal
-            </label>
-
-            <input
-                type="number"
-                id="smarties"
-                min="0"
-                value="0"
-                oninput="berekenTotaal()"
-            >
-
-        </div>
-
-
-        <div class="order-item">
-
-            <h3>🍫 Double Chocolate</h3>
-
-            <p>
-                <span class="order-price">€1,75</span> per cookie
-            </p>
-
-            <label for="doubleChocolate">
-                Aantal
-            </label>
-
-            <input
-                type="number"
-                id="doubleChocolate"
-                min="0"
-                value="0"
-                oninput="berekenTotaal()"
-            >
-
-        </div>
-
-
-        <div class="order-divider">
-            📦 Cookieboxen
-        </div>
-
-
-        <!-- BOX 4 -->
-
-        <div class="order-item">
-
-            <h3>📦 Box van 4 — €5,50</h3>
-
-            <label for="box4">
-                Aantal boxen
-            </label>
-
-            <input
-                type="number"
-                id="box4"
-                min="0"
-                value="0"
-                oninput="updateBox4()"
-            >
-
-            <div class="box-choice">
-
-                <h4>
-                    Welke cookies wil je in je box?
-                </h4>
-
-                <div class="choice-row">
-                    <span>🍪 Chocolate Chip</span>
-
+                    <label>Chocolate Chip</label>
                     <input
                         type="number"
                         id="box4Chocolate"
@@ -807,11 +830,8 @@
                         value="0"
                         oninput="updateBox4()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🌈 Smarties</span>
-
+                    <label>Smarties</label>
                     <input
                         type="number"
                         id="box4Smarties"
@@ -819,11 +839,8 @@
                         value="0"
                         oninput="updateBox4()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🍫 Double Chocolate</span>
-
+                    <label>Double Chocolate</label>
                     <input
                         type="number"
                         id="box4Double"
@@ -831,47 +848,35 @@
                         value="0"
                         oninput="updateBox4()"
                     >
-                </div>
 
-                <div
-                    id="box4Status"
-                    class="box-counter"
-                >
-                    Kies 4 cookies
+                    <p class="box-status" id="box4Status">
+                        0 / 4 cookies gekozen
+                    </p>
+
                 </div>
 
             </div>
 
-        </div>
+            <!-- BOX 6 -->
 
+            <div class="order-group">
 
-        <!-- BOX 6 -->
+                <h3>📦 Box van 6 — €8,00</h3>
 
-        <div class="order-item">
+                <input
+                    type="number"
+                    id="box6"
+                    min="0"
+                    value="0"
+                    oninput="updateBox6()"
+                    placeholder="Aantal boxen"
+                >
 
-            <h3>📦 Box van 6 — €8,00</h3>
+                <div class="box-selection">
 
-            <label for="box6">
-                Aantal boxen
-            </label>
+                    <p><strong>Welke cookies wil je?</strong></p>
 
-            <input
-                type="number"
-                id="box6"
-                min="0"
-                value="0"
-                oninput="updateBox6()"
-            >
-
-            <div class="box-choice">
-
-                <h4>
-                    Welke cookies wil je in je box?
-                </h4>
-
-                <div class="choice-row">
-                    <span>🍪 Chocolate Chip</span>
-
+                    <label>Chocolate Chip</label>
                     <input
                         type="number"
                         id="box6Chocolate"
@@ -879,11 +884,8 @@
                         value="0"
                         oninput="updateBox6()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🌈 Smarties</span>
-
+                    <label>Smarties</label>
                     <input
                         type="number"
                         id="box6Smarties"
@@ -891,11 +893,8 @@
                         value="0"
                         oninput="updateBox6()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🍫 Double Chocolate</span>
-
+                    <label>Double Chocolate</label>
                     <input
                         type="number"
                         id="box6Double"
@@ -903,47 +902,35 @@
                         value="0"
                         oninput="updateBox6()"
                     >
-                </div>
 
-                <div
-                    id="box6Status"
-                    class="box-counter"
-                >
-                    Kies 6 cookies
+                    <p class="box-status" id="box6Status">
+                        0 / 6 cookies gekozen
+                    </p>
+
                 </div>
 
             </div>
 
-        </div>
+            <!-- BOX 10 -->
 
+            <div class="order-group">
 
-        <!-- BOX 10 -->
+                <h3>📦 Box van 10 — €13,00</h3>
 
-        <div class="order-item">
+                <input
+                    type="number"
+                    id="box10"
+                    min="0"
+                    value="0"
+                    oninput="updateBox10()"
+                    placeholder="Aantal boxen"
+                >
 
-            <h3>🎁 Box van 10 — €13,00</h3>
+                <div class="box-selection">
 
-            <label for="box10">
-                Aantal boxen
-            </label>
+                    <p><strong>Welke cookies wil je?</strong></p>
 
-            <input
-                type="number"
-                id="box10"
-                min="0"
-                value="0"
-                oninput="updateBox10()"
-            >
-
-            <div class="box-choice">
-
-                <h4>
-                    Welke cookies wil je in je box?
-                </h4>
-
-                <div class="choice-row">
-                    <span>🍪 Chocolate Chip</span>
-
+                    <label>Chocolate Chip</label>
                     <input
                         type="number"
                         id="box10Chocolate"
@@ -951,11 +938,8 @@
                         value="0"
                         oninput="updateBox10()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🌈 Smarties</span>
-
+                    <label>Smarties</label>
                     <input
                         type="number"
                         id="box10Smarties"
@@ -963,11 +947,8 @@
                         value="0"
                         oninput="updateBox10()"
                     >
-                </div>
 
-                <div class="choice-row">
-                    <span>🍫 Double Chocolate</span>
-
+                    <label>Double Chocolate</label>
                     <input
                         type="number"
                         id="box10Double"
@@ -975,789 +956,589 @@
                         value="0"
                         oninput="updateBox10()"
                     >
-                </div>
 
-                <div
-                    id="box10Status"
-                    class="box-counter"
-                >
-                    Kies 10 cookies
+                    <p class="box-status" id="box10Status">
+                        0 / 10 cookies gekozen
+                    </p>
+
                 </div>
 
             </div>
 
+            <!-- GEGEVENS -->
+
+            <div class="order-group">
+
+                <h3>📋 Jouw gegevens</h3>
+
+                <label for="naam">Naam</label>
+                <input
+                    type="text"
+                    id="naam"
+                    placeholder="Jouw naam"
+                >
+
+                <label for="telefoon">Telefoonnummer</label>
+                <input
+                    type="tel"
+                    id="telefoon"
+                    placeholder="Jouw telefoonnummer"
+                >
+
+                <label for="datum">Datum</label>
+                <input
+                    type="date"
+                    id="datum"
+                >
+
+                <label for="tijd">Gewenste ophaaltijd</label>
+                <input
+                    type="time"
+                    id="tijd"
+                >
+
+            </div>
+
+            <!-- TOTAAL -->
+
+            <div class="total">
+                Totaal: €<span id="totaal">0.00</span>
+            </div>
+
+            <!-- WHATSAPP -->
+
+            <button
+                class="whatsapp-button"
+                onclick="verstuurBestelling()"
+            >
+                📱 Bestelling via WhatsApp sturen
+            </button>
+
         </div>
 
+    </section>
 
-        <!-- GEGEVENS -->
+    <!-- =========================
+         OPHALEN
+    ========================= -->
 
-        <label for="naam">
-            Naam
-        </label>
+    <section id="ophalen" class="reveal">
 
-        <input
-            type="text"
-            id="naam"
-            placeholder="Vul je naam in"
-        >
-
-
-        <label for="telefoon">
-            Telefoonnummer
-        </label>
-
-        <input
-            type="tel"
-            id="telefoon"
-            placeholder="Vul je telefoonnummer in"
-        >
-
-
-        <label for="datum">
-            Ophaaldatum
-        </label>
-
-        <input
-            type="date"
-            id="datum"
-        >
-
-
-        <label for="tijd">
-            Ophaaltijd
-        </label>
-
-        <input
-            type="time"
-            id="tijd"
-        >
-
-
-        <!-- TOTAAL -->
-
-        <div class="total">
-            Totaal: €<span id="totaal">0,00</span>
-        </div>
-
-
-        <button
-            class="whatsapp-button"
-            onclick="verstuurBestelling()"
-        >
-            📱 Bestelling plaatsen via WhatsApp
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- OPHALEN -->
-
-<section id="ophalen">
-
-    <h2>📍 Ophalen</h2>
-
-    <div class="info-grid">
+        <h2>📍 Ophalen</h2>
 
         <div class="info-box">
 
-            <div class="info-icon">📍</div>
-
-            <h3>Alleen ophalen</h3>
+            <p>🍪 Je bestelling kan worden opgehaald.</p>
 
             <p>
-                Bestellingen kunnen alleen worden opgehaald.
-                Er is geen bezorging.
+                📅 Kies tijdens het bestellen jouw gewenste datum.
+            </p>
+
+            <p>
+                ⏰ Kies ook een gewenste ophaaltijd.
+            </p>
+
+            <p>
+                📱 Na het bestellen nemen we contact met je op via WhatsApp.
             </p>
 
         </div>
 
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="reveal">
+
+        <h2>📞 Contact</h2>
 
         <div class="info-box">
 
-            <div class="info-icon">🕐</div>
-
-            <h3>Spreken we samen af</h3>
+            <p>
+                Heb je een vraag over de cookies of je bestelling?
+            </p>
 
             <p>
-                Na je bestelling spreken we via WhatsApp
-                de ophaaltijd af.
+                📱 WhatsApp: <strong>06 19853623</strong>
+            </p>
+
+            <p>
+                🍪 Jayden's Cookies
             </p>
 
         </div>
 
+    </section>
 
-        <div class="info-box">
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-            <div class="info-icon">🍪</div>
+    <footer>
 
-            <h3>Vers & lekker</h3>
-
-            <p>
-                Elke cookie wordt vers gebakken.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-    <h2>📱 Contact</h2>
-
-    <div class="contact-box">
+        <p>🍪 Jayden's Cookies</p>
 
         <p>
-            Heb je een vraag over je bestelling?
+            Vers gebakken met liefde ❤️
         </p>
 
-        <p style="margin-top: 10px;">
-            Stuur gerust een bericht via WhatsApp!
+        <p>
+            © 2026 Jayden's Cookies
         </p>
 
-        <br>
+    </footer>
 
-        <a
-            class="contact-button"
-            href="https://wa.me/31619853623"
-            target="_blank"
-        >
-            📱 Chat via WhatsApp
-        </a>
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
-    </div>
+    <script>
 
-</section>
+        /* PRIJZEN */
 
+        const prijsChocolateChip = 1.50;
+        const prijsSmarties = 1.50;
+        const prijsDoubleChocolate = 1.75;
 
-<!-- FOOTER -->
+        const prijsBox4 = 5.50;
+        const prijsBox6 = 8.00;
+        const prijsBox10 = 13.00;
 
-<footer>
 
-    <p>
-        © 2026 Jayden's Cookies 🍪
-    </p>
+        /* GET NUMBER */
 
-    <p>
-        Alle rechten voorbehouden.
-    </p>
+        function getNumber(id) {
 
-</footer>
+            const value = Number(document.getElementById(id).value);
 
+            if (isNaN(value) || value < 0) {
+                return 0;
+            }
 
-<script>
-
-    /* PRIJZEN */
-
-    const prijsChocolateChip = 1.50;
-    const prijsSmarties = 1.50;
-    const prijsDoubleChocolate = 1.75;
-
-    const prijsBox4 = 5.50;
-    const prijsBox6 = 8.00;
-    const prijsBox10 = 13.00;
-
-
-    /* VEILIG GETAL */
-
-    function getNumber(id) {
-
-        const value =
-            Number(document.getElementById(id).value);
-
-        if (isNaN(value) || value < 0) {
-            return 0;
-        }
-
-        return value;
-    }
-
-
-    /* BOX 4 */
-
-    function getBox4Aantal() {
-
-        return (
-            getNumber("box4Chocolate") +
-            getNumber("box4Smarties") +
-            getNumber("box4Double")
-        );
-    }
-
-
-    function updateBox4() {
-
-        const boxAantal =
-            getNumber("box4");
-
-        const gekozen =
-            getBox4Aantal();
-
-        const status =
-            document.getElementById("box4Status");
-
-
-        if (boxAantal === 0) {
-
-            status.textContent =
-                "Kies 4 cookies als je deze box wilt bestellen.";
-
-            status.className =
-                "box-counter";
-
-            return;
-        }
-
-
-        if (gekozen === 4) {
-
-            status.textContent =
-                "✅ 4 / 4 cookies gekozen";
-
-            status.className =
-                "box-counter ok";
-
-        } else if (gekozen < 4) {
-
-            status.textContent =
-                "⚠️ " +
-                gekozen +
-                " / 4 gekozen — kies nog " +
-                (4 - gekozen);
-
-            status.className =
-                "box-counter error";
-
-        } else {
-
-            status.textContent =
-                "❌ " +
-                gekozen +
-                " / 4 gekozen — haal " +
-                (gekozen - 4) +
-                " cookie(s) weg.";
-
-            status.className =
-                "box-counter error";
-        }
-
-        berekenTotaal();
-    }
-
-
-    /* BOX 6 */
-
-    function getBox6Aantal() {
-
-        return (
-            getNumber("box6Chocolate") +
-            getNumber("box6Smarties") +
-            getNumber("box6Double")
-        );
-    }
-
-
-    function updateBox6() {
-
-        const boxAantal =
-            getNumber("box6");
-
-        const gekozen =
-            getBox6Aantal();
-
-        const status =
-            document.getElementById("box6Status");
-
-
-        if (boxAantal === 0) {
-
-            status.textContent =
-                "Kies 6 cookies als je deze box wilt bestellen.";
-
-            status.className =
-                "box-counter";
-
-            return;
-        }
-
-
-        if (gekozen === 6) {
-
-            status.textContent =
-                "✅ 6 / 6 cookies gekozen";
-
-            status.className =
-                "box-counter ok";
-
-        } else if (gekozen < 6) {
-
-            status.textContent =
-                "⚠️ " +
-                gekozen +
-                " / 6 gekozen — kies nog " +
-                (6 - gekozen);
-
-            status.className =
-                "box-counter error";
-
-        } else {
-
-            status.textContent =
-                "❌ " +
-                gekozen +
-                " / 6 gekozen — haal " +
-                (gekozen - 6) +
-                " cookie(s) weg.";
-
-            status.className =
-                "box-counter error";
-        }
-
-        berekenTotaal();
-    }
-
-
-    /* BOX 10 */
-
-    function getBox10Aantal() {
-
-        return (
-            getNumber("box10Chocolate") +
-            getNumber("box10Smarties") +
-            getNumber("box10Double")
-        );
-    }
-
-
-    function updateBox10() {
-
-        const boxAantal =
-            getNumber("box10");
-
-        const gekozen =
-            getBox10Aantal();
-
-        const status =
-            document.getElementById("box10Status");
-
-
-        if (boxAantal === 0) {
-
-            status.textContent =
-                "Kies 10 cookies als je deze box wilt bestellen.";
-
-            status.className =
-                "box-counter";
-
-            return;
-        }
-
-
-        if (gekozen === 10) {
-
-            status.textContent =
-                "✅ 10 / 10 cookies gekozen";
-
-            status.className =
-                "box-counter ok";
-
-        } else if (gekozen < 10) {
-
-            status.textContent =
-                "⚠️ " +
-                gekozen +
-                " / 10 gekozen — kies nog " +
-                (10 - gekozen);
-
-            status.className =
-                "box-counter error";
-
-        } else {
-
-            status.textContent =
-                "❌ " +
-                gekozen +
-                " / 10 gekozen — haal " +
-                (gekozen - 10) +
-                " cookie(s) weg.";
-
-            status.className =
-                "box-counter error";
-        }
-
-        berekenTotaal();
-    }
-
-
-    /* TOTAAL */
-
-    function berekenTotaal() {
-
-        const chocolateChip =
-            getNumber("chocolateChip");
-
-        const smarties =
-            getNumber("smarties");
-
-        const doubleChocolate =
-            getNumber("doubleChocolate");
-
-        const box4 =
-            getNumber("box4");
-
-        const box6 =
-            getNumber("box6");
-
-        const box10 =
-            getNumber("box10");
-
-
-        const totaal =
-            (chocolateChip * prijsChocolateChip) +
-            (smarties * prijsSmarties) +
-            (doubleChocolate * prijsDoubleChocolate) +
-            (box4 * prijsBox4) +
-            (box6 * prijsBox6) +
-            (box10 * prijsBox10);
-
-
-        document.getElementById("totaal").textContent =
-            totaal.toFixed(2).replace(".", ",");
-    }
-
-
-    /* BESTELLING VERSTUREN */
-
-    function verstuurBestelling() {
-
-        const chocolateChip =
-            getNumber("chocolateChip");
-
-        const smarties =
-            getNumber("smarties");
-
-        const doubleChocolate =
-            getNumber("doubleChocolate");
-
-        const box4 =
-            getNumber("box4");
-
-        const box6 =
-            getNumber("box6");
-
-        const box10 =
-            getNumber("box10");
-
-
-        const box4Chocolate =
-            getNumber("box4Chocolate");
-
-        const box4Smarties =
-            getNumber("box4Smarties");
-
-        const box4Double =
-            getNumber("box4Double");
-
-
-        const box6Chocolate =
-            getNumber("box6Chocolate");
-
-        const box6Smarties =
-            getNumber("box6Smarties");
-
-        const box6Double =
-            getNumber("box6Double");
-
-
-        const box10Chocolate =
-            getNumber("box10Chocolate");
-
-        const box10Smarties =
-            getNumber("box10Smarties");
-
-        const box10Double =
-            getNumber("box10Double");
-
-
-        const naam =
-            document.getElementById("naam").value.trim();
-
-        const telefoon =
-            document.getElementById("telefoon").value.trim();
-
-        const datum =
-            document.getElementById("datum").value;
-
-        const tijd =
-            document.getElementById("tijd").value;
-
-
-        /* CONTROLE BOXEN */
-
-        if (box4 > 0 && getBox4Aantal() !== 4) {
-
-            alert(
-                "Je hebt bij de Box van 4 niet precies 4 cookies gekozen."
-            );
-
-            return;
-        }
-
-
-        if (box6 > 0 && getBox6Aantal() !== 6) {
-
-            alert(
-                "Je hebt bij de Box van 6 niet precies 6 cookies gekozen."
-            );
-
-            return;
-        }
-
-
-        if (box10 > 0 && getBox10Aantal() !== 10) {
-
-            alert(
-                "Je hebt bij de Box van 10 niet precies 10 cookies gekozen."
-            );
-
-            return;
-        }
-
-
-        /* CONTROLE OF ER IETS BESTELD IS */
-
-        const totaalBesteld =
-            chocolateChip +
-            smarties +
-            doubleChocolate +
-            box4 +
-            box6 +
-            box10;
-
-
-        if (totaalBesteld === 0) {
-
-            alert(
-                "Kies eerst minstens 1 cookie of cookiebox."
-            );
-
-            return;
-        }
-
-
-        /* CONTROLE GEGEVENS */
-
-        if (
-            naam === "" ||
-            telefoon === "" ||
-            datum === "" ||
-            tijd === ""
-        ) {
-
-            alert(
-                "Vul alle gegevens in voordat je de bestelling verstuurt."
-            );
-
-            return;
-        }
-
-
-        /* TOTAAL */
-
-        const totaal =
-            (
-                (chocolateChip * prijsChocolateChip) +
-                (smarties * prijsSmarties) +
-                (doubleChocolate * prijsDoubleChocolate) +
-                (box4 * prijsBox4) +
-                (box6 * prijsBox6) +
-                (box10 * prijsBox10)
-            )
-            .toFixed(2)
-            .replace(".", ",");
-
-
-        /* WHATSAPP BERICHT */
-
-        let bericht =
-            "🍪 NIEUWE BESTELLING - JAYDEN'S COOKIES 🍪\n\n";
-
-
-        bericht +=
-            "Naam: " +
-            naam +
-            "\n";
-
-        bericht +=
-            "Telefoonnummer: " +
-            telefoon +
-            "\n\n";
-
-
-        bericht +=
-            "BESTELLING:\n";
-
-
-        /* LOSSE COOKIES */
-
-        if (chocolateChip > 0) {
-
-            bericht +=
-                "🍪 Chocolate Chip: " +
-                chocolateChip +
-                "x\n";
-        }
-
-
-        if (smarties > 0) {
-
-            bericht +=
-                "🌈 Smarties Cookie: " +
-                smarties +
-                "x\n";
-        }
-
-
-        if (doubleChocolate > 0) {
-
-            bericht +=
-                "🍫 Double Chocolate: " +
-                doubleChocolate +
-                "x\n";
+            return value;
         }
 
 
         /* BOX 4 */
 
-        if (box4 > 0) {
+        function getBox4Aantal() {
 
-            bericht +=
-                "\n📦 BOX VAN 4: " +
-                box4 +
-                "x\n";
+            return (
+                getNumber("box4Chocolate") +
+                getNumber("box4Smarties") +
+                getNumber("box4Double")
+            );
+        }
 
-            bericht +=
-                "  🍪 Chocolate Chip: " +
-                box4Chocolate +
-                "\n";
 
-            bericht +=
-                "  🌈 Smarties: " +
-                box4Smarties +
-                "\n";
+        function updateBox4() {
 
-            bericht +=
-                "  🍫 Double Chocolate: " +
-                box4Double +
-                "\n";
+            const aantal = getBox4Aantal();
+
+            document.getElementById("box4Status").textContent =
+                aantal + " / 4 cookies gekozen";
+
+            berekenTotaal();
         }
 
 
         /* BOX 6 */
 
-        if (box6 > 0) {
+        function getBox6Aantal() {
 
-            bericht +=
-                "\n📦 BOX VAN 6: " +
-                box6 +
-                "x\n";
+            return (
+                getNumber("box6Chocolate") +
+                getNumber("box6Smarties") +
+                getNumber("box6Double")
+            );
+        }
 
-            bericht +=
-                "  🍪 Chocolate Chip: " +
-                box6Chocolate +
-                "\n";
 
-            bericht +=
-                "  🌈 Smarties: " +
-                box6Smarties +
-                "\n";
+        function updateBox6() {
 
-            bericht +=
-                "  🍫 Double Chocolate: " +
-                box6Double +
-                "\n";
+            const aantal = getBox6Aantal();
+
+            document.getElementById("box6Status").textContent =
+                aantal + " / 6 cookies gekozen";
+
+            berekenTotaal();
         }
 
 
         /* BOX 10 */
 
-        if (box10 > 0) {
+        function getBox10Aantal() {
 
-            bericht +=
-                "\n🎁 BOX VAN 10: " +
-                box10 +
-                "x\n";
-
-            bericht +=
-                "  🍪 Chocolate Chip: " +
-                box10Chocolate +
-                "\n";
-
-            bericht +=
-                "  🌈 Smarties: " +
-                box10Smarties +
-                "\n";
-
-            bericht +=
-                "  🍫 Double Chocolate: " +
-                box10Double +
-                "\n";
+            return (
+                getNumber("box10Chocolate") +
+                getNumber("box10Smarties") +
+                getNumber("box10Double")
+            );
         }
 
 
-        bericht +=
-            "\nOphaaldatum: " +
-            datum +
-            "\n";
+        function updateBox10() {
 
-        bericht +=
-            "Ophaaltijd: " +
-            tijd +
-            "\n";
+            const aantal = getBox10Aantal();
 
-        bericht +=
-            "Totaal: €" +
-            totaal +
-            "\n\n";
+            document.getElementById("box10Status").textContent =
+                aantal + " / 10 cookies gekozen";
 
-        bericht +=
-            "📍 Alleen ophalen";
+            berekenTotaal();
+        }
 
 
-        /* WHATSAPP */
+        /* TOTAAL BEREKENEN */
 
-        const whatsappNummer =
-            "31619853623";
+        function berekenTotaal() {
+
+            const chocolateChip =
+                getNumber("chocolateChip");
+
+            const smarties =
+                getNumber("smarties");
+
+            const doubleChocolate =
+                getNumber("doubleChocolate");
+
+            const box4 =
+                getNumber("box4");
+
+            const box6 =
+                getNumber("box6");
+
+            const box10 =
+                getNumber("box10");
 
 
-        const whatsappLink =
-            "https://wa.me/" +
-            whatsappNummer +
-            "?text=" +
-            encodeURIComponent(bericht);
+            const totaal =
+                (chocolateChip * prijsChocolateChip) +
+                (smarties * prijsSmarties) +
+                (doubleChocolate * prijsDoubleChocolate) +
+                (box4 * prijsBox4) +
+                (box6 * prijsBox6) +
+                (box10 * prijsBox10);
 
 
-        window.open(
-            whatsappLink,
-            "_blank"
-        );
-    }
+            document.getElementById("totaal").textContent =
+                totaal.toFixed(2).replace(".", ",");
+        }
 
 
-    /* START */
+        /* WHATSAPP BESTELLING */
 
-    berekenTotaal();
-    updateBox4();
-    updateBox6();
-    updateBox10();
+        function verstuurBestelling() {
 
-</script>
+            const box4 =
+                getNumber("box4");
+
+            const box6 =
+                getNumber("box6");
+
+            const box10 =
+                getNumber("box10");
+
+
+            /* BOX VALIDATIE */
+
+            if (box4 > 0 && getBox4Aantal() !== box4 * 4) {
+
+                alert(
+                    "Je hebt bij Box van 4 niet het juiste aantal cookies gekozen."
+                );
+
+                return;
+            }
+
+
+            if (box6 > 0 && getBox6Aantal() !== box6 * 6) {
+
+                alert(
+                    "Je hebt bij Box van 6 niet het juiste aantal cookies gekozen."
+                );
+
+                return;
+            }
+
+
+            if (box10 > 0 && getBox10Aantal() !== box10 * 10) {
+
+                alert(
+                    "Je hebt bij Box van 10 niet het juiste aantal cookies gekozen."
+                );
+
+                return;
+            }
+
+
+            /* LOSSE COOKIES */
+
+            const chocolateChip =
+                getNumber("chocolateChip");
+
+            const smarties =
+                getNumber("smarties");
+
+            const doubleChocolate =
+                getNumber("doubleChocolate");
+
+
+            /* CONTROLEREN OF ER IETS BESTELD IS */
+
+            if (
+                chocolateChip === 0 &&
+                smarties === 0 &&
+                doubleChocolate === 0 &&
+                box4 === 0 &&
+                box6 === 0 &&
+                box10 === 0
+            ) {
+
+                alert("Kies eerst wat je wilt bestellen.");
+
+                return;
+            }
+
+
+            /* GEGEVENS */
+
+            const naam =
+                document.getElementById("naam").value.trim();
+
+            const telefoon =
+                document.getElementById("telefoon").value.trim();
+
+            const datum =
+                document.getElementById("datum").value;
+
+            const tijd =
+                document.getElementById("tijd").value;
+
+
+            if (!naam || !telefoon || !datum || !tijd) {
+
+                alert(
+                    "Vul eerst je naam, telefoonnummer, datum en tijd in."
+                );
+
+                return;
+            }
+
+
+            /* BERICHT */
+
+            let bericht =
+                "🍪 NIEUWE BESTELLING - JAYDEN'S COOKIES%0A%0A";
+
+
+            bericht +=
+                "👤 Naam: " + encodeURIComponent(naam) + "%0A";
+
+            bericht +=
+                "📱 Telefoon: " + encodeURIComponent(telefoon) + "%0A";
+
+            bericht +=
+                "📅 Datum: " + encodeURIComponent(datum) + "%0A";
+
+            bericht +=
+                "⏰ Tijd: " + encodeURIComponent(tijd) + "%0A%0A";
+
+
+            bericht += "🍪 BESTELLING:%0A";
+
+
+            if (chocolateChip > 0) {
+
+                bericht +=
+                    "Chocolate Chip: " +
+                    chocolateChip +
+                    "%0A";
+            }
+
+
+            if (smarties > 0) {
+
+                bericht +=
+                    "Smarties Cookie: " +
+                    smarties +
+                    "%0A";
+            }
+
+
+            if (doubleChocolate > 0) {
+
+                bericht +=
+                    "Double Chocolate: " +
+                    doubleChocolate +
+                    "%0A";
+            }
+
+
+            /* BOX 4 */
+
+            if (box4 > 0) {
+
+                bericht +=
+                    "%0A📦 Box van 4 (" +
+                    box4 +
+                    "x):%0A";
+
+                bericht +=
+                    "Chocolate Chip: " +
+                    getNumber("box4Chocolate") +
+                    "%0A";
+
+                bericht +=
+                    "Smarties: " +
+                    getNumber("box4Smarties") +
+                    "%0A";
+
+                bericht +=
+                    "Double Chocolate: " +
+                    getNumber("box4Double") +
+                    "%0A";
+            }
+
+
+            /* BOX 6 */
+
+            if (box6 > 0) {
+
+                bericht +=
+                    "%0A📦 Box van 6 (" +
+                    box6 +
+                    "x):%0A";
+
+                bericht +=
+                    "Chocolate Chip: " +
+                    getNumber("box6Chocolate") +
+                    "%0A";
+
+                bericht +=
+                    "Smarties: " +
+                    getNumber("box6Smarties") +
+                    "%0A";
+
+                bericht +=
+                    "Double Chocolate: " +
+                    getNumber("box6Double") +
+                    "%0A";
+            }
+
+
+            /* BOX 10 */
+
+            if (box10 > 0) {
+
+                bericht +=
+                    "%0A📦 Box van 10 (" +
+                    box10 +
+                    "x):%0A";
+
+                bericht +=
+                    "Chocolate Chip: " +
+                    getNumber("box10Chocolate") +
+                    "%0A";
+
+                bericht +=
+                    "Smarties: " +
+                    getNumber("box10Smarties") +
+                    "%0A";
+
+                bericht +=
+                    "Double Chocolate: " +
+                    getNumber("box10Double") +
+                    "%0A";
+            }
+
+
+            /* TOTAAL */
+
+            const totaal =
+                (
+                    chocolateChip * prijsChocolateChip +
+                    smarties * prijsSmarties +
+                    doubleChocolate * prijsDoubleChocolate +
+                    box4 * prijsBox4 +
+                    box6 * prijsBox6 +
+                    box10 * prijsBox10
+                ).toFixed(2);
+
+
+            bericht +=
+                "%0A💰 Totaal: €" +
+                totaal.replace(".", ",");
+
+
+            /* WHATSAPP */
+
+            const whatsappNummer =
+                "31619853623";
+
+
+            const url =
+                "https://wa.me/" +
+                whatsappNummer +
+                "?text=" +
+                bericht;
+
+
+            window.open(url, "_blank");
+        }
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(entry.target);
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.15
+                }
+            );
+
+
+        revealElements.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =========================
+           START
+        ========================= */
+
+        berekenTotaal();
+
+        updateBox4();
+
+        updateBox6();
+
+        updateBox10();
+
+    </script>
 
 </body>
 </html>
