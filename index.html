@@ -167,7 +167,7 @@
             font-size: 20px;
         }
 
-        /* KOEKJES */
+        /* COOKIES */
 
         .cookie-grid {
             display: grid;
@@ -208,6 +208,62 @@
             margin: 15px 0;
         }
 
+        /* COOKIEBOXEN */
+
+        .box-section {
+            background: #fffaf4;
+            border-radius: 25px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .box-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+        .box-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .box-card {
+            background: #f5eadc;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 2px solid #ead8c7;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .box-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .box-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .box-card h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .box-card p {
+            margin-bottom: 12px;
+        }
+
+        .box-price {
+            font-size: 25px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
         /* BESTELLEN */
 
         .order-box {
@@ -234,6 +290,14 @@
         .order-price {
             color: #8b4513;
             font-weight: bold;
+        }
+
+        .order-divider {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 0 20px;
+            color: #6b3e26;
         }
 
         label {
@@ -364,6 +428,7 @@
 
             .fresh-grid,
             .cookie-grid,
+            .box-grid,
             .info-grid {
                 grid-template-columns: 1fr;
             }
@@ -386,10 +451,12 @@
     <p>Verse, lekkere cookies speciaal voor jou!</p>
 </header>
 
+
 <nav>
     <a href="#home">Home</a>
     <a href="#vers">Vers gebakken</a>
     <a href="#cookies">Cookies</a>
+    <a href="#boxen">Cookieboxen</a>
     <a href="#bestellen">Bestellen</a>
     <a href="#ophalen">Ophalen</a>
     <a href="#contact">Contact</a>
@@ -468,9 +535,6 @@
 
     <div class="cookie-grid">
 
-
-        <!-- CHOCOLATE CHIP -->
-
         <div class="cookie-card">
 
             <img
@@ -479,9 +543,7 @@
                 alt="Chocolate Chip Cookie"
             >
 
-            <h3>
-                Chocolate Chip
-            </h3>
+            <h3>Chocolate Chip</h3>
 
             <p>
                 Een zachte cookie met heerlijke stukjes chocolade.
@@ -494,8 +556,6 @@
         </div>
 
 
-        <!-- SMARTIES -->
-
         <div class="cookie-card">
 
             <img
@@ -504,9 +564,7 @@
                 alt="Smarties Cookie"
             >
 
-            <h3>
-                Smarties Cookie
-            </h3>
+            <h3>Smarties Cookie</h3>
 
             <p>
                 Een lekkere cookie met vrolijke Smarties.
@@ -519,8 +577,6 @@
         </div>
 
 
-        <!-- DOUBLE CHOCOLATE -->
-
         <div class="cookie-card">
 
             <img
@@ -529,9 +585,7 @@
                 alt="Double Chocolate Cookie"
             >
 
-            <h3>
-                Double Chocolate
-            </h3>
+            <h3>Double Chocolate</h3>
 
             <p>
                 Een extra chocoladecookie voor echte chocoladeliefhebbers.
@@ -539,6 +593,85 @@
 
             <div class="price">
                 €1,75
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COOKIEBOXEN -->
+
+<section id="boxen">
+
+    <div class="box-section">
+
+        <h2>📦 Cookieboxen</h2>
+
+        <p class="box-intro">
+            Liever meerdere cookies tegelijk?
+            Kies dan voor een heerlijke cookiebox! 🍪
+        </p>
+
+        <div class="box-grid">
+
+
+            <div class="box-card">
+
+                <div class="box-icon">
+                    📦
+                </div>
+
+                <h3>Box van 4</h3>
+
+                <p>
+                    4 heerlijke cookies naar keuze.
+                </p>
+
+                <div class="box-price">
+                    €5,50
+                </div>
+
+            </div>
+
+
+            <div class="box-card">
+
+                <div class="box-icon">
+                    📦
+                </div>
+
+                <h3>Box van 6</h3>
+
+                <p>
+                    6 heerlijke cookies naar keuze.
+                </p>
+
+                <div class="box-price">
+                    €8,00
+                </div>
+
+            </div>
+
+
+            <div class="box-card">
+
+                <div class="box-icon">
+                    🎁
+                </div>
+
+                <h3>Box van 10</h3>
+
+                <p>
+                    10 heerlijke cookies naar keuze.
+                </p>
+
+                <div class="box-price">
+                    €13,00
+                </div>
+
             </div>
 
         </div>
@@ -557,7 +690,7 @@
     <div class="order-box">
 
 
-        <!-- CHOCOLATE CHIP -->
+        <!-- LOSSE COOKIES -->
 
         <div class="order-item">
 
@@ -582,8 +715,6 @@
         </div>
 
 
-        <!-- SMARTIES -->
-
         <div class="order-item">
 
             <h3>🌈 Smarties Cookie</h3>
@@ -607,8 +738,6 @@
         </div>
 
 
-        <!-- DOUBLE CHOCOLATE -->
-
         <div class="order-item">
 
             <h3>🍫 Double Chocolate</h3>
@@ -631,6 +760,91 @@
 
         </div>
 
+
+        <div class="order-divider">
+            📦 Cookieboxen
+        </div>
+
+
+        <!-- BOX VAN 4 -->
+
+        <div class="order-item">
+
+            <h3>📦 Box van 4</h3>
+
+            <p>
+                4 cookies naar keuze —
+                <span class="order-price">€5,50</span>
+            </p>
+
+            <label for="box4">
+                Aantal boxen
+            </label>
+
+            <input
+                type="number"
+                id="box4"
+                min="0"
+                value="0"
+                oninput="berekenTotaal()"
+            >
+
+        </div>
+
+
+        <!-- BOX VAN 6 -->
+
+        <div class="order-item">
+
+            <h3>📦 Box van 6</h3>
+
+            <p>
+                6 cookies naar keuze —
+                <span class="order-price">€8,00</span>
+            </p>
+
+            <label for="box6">
+                Aantal boxen
+            </label>
+
+            <input
+                type="number"
+                id="box6"
+                min="0"
+                value="0"
+                oninput="berekenTotaal()"
+            >
+
+        </div>
+
+
+        <!-- BOX VAN 10 -->
+
+        <div class="order-item">
+
+            <h3>🎁 Box van 10</h3>
+
+            <p>
+                10 cookies naar keuze —
+                <span class="order-price">€13,00</span>
+            </p>
+
+            <label for="box10">
+                Aantal boxen
+            </label>
+
+            <input
+                type="number"
+                id="box10"
+                min="0"
+                value="0"
+                oninput="berekenTotaal()"
+            >
+
+        </div>
+
+
+        <!-- GEGEVENS -->
 
         <label for="naam">
             Naam
@@ -673,6 +887,8 @@
             id="tijd"
         >
 
+
+        <!-- TOTAAL -->
 
         <div class="total">
             Totaal: €<span id="totaal">0,00</span>
@@ -775,6 +991,8 @@
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
     <p>
@@ -794,6 +1012,10 @@
     const prijsSmarties = 1.50;
     const prijsDoubleChocolate = 1.75;
 
+    const prijsBox4 = 5.50;
+    const prijsBox6 = 8.00;
+    const prijsBox10 = 13.00;
+
 
     function berekenTotaal() {
 
@@ -806,11 +1028,23 @@
         let doubleChocolate =
             Number(document.getElementById("doubleChocolate").value) || 0;
 
+        let box4 =
+            Number(document.getElementById("box4").value) || 0;
+
+        let box6 =
+            Number(document.getElementById("box6").value) || 0;
+
+        let box10 =
+            Number(document.getElementById("box10").value) || 0;
+
 
         let totaal =
             (chocolateChip * prijsChocolateChip) +
             (smarties * prijsSmarties) +
-            (doubleChocolate * prijsDoubleChocolate);
+            (doubleChocolate * prijsDoubleChocolate) +
+            (box4 * prijsBox4) +
+            (box6 * prijsBox6) +
+            (box10 * prijsBox10);
 
 
         document.getElementById("totaal").textContent =
@@ -829,6 +1063,15 @@
         const doubleChocolate =
             Number(document.getElementById("doubleChocolate").value) || 0;
 
+        const box4 =
+            Number(document.getElementById("box4").value) || 0;
+
+        const box6 =
+            Number(document.getElementById("box6").value) || 0;
+
+        const box10 =
+            Number(document.getElementById("box10").value) || 0;
+
 
         const naam =
             document.getElementById("naam").value.trim();
@@ -846,12 +1089,15 @@
         const totaalAantal =
             chocolateChip +
             smarties +
-            doubleChocolate;
+            doubleChocolate +
+            box4 +
+            box6 +
+            box10;
 
 
         if (totaalAantal === 0) {
 
-            alert("Kies eerst minstens 1 cookie.");
+            alert("Kies eerst minstens 1 cookie of cookiebox.");
 
             return;
         }
@@ -876,7 +1122,10 @@
             (
                 (chocolateChip * prijsChocolateChip) +
                 (smarties * prijsSmarties) +
-                (doubleChocolate * prijsDoubleChocolate)
+                (doubleChocolate * prijsDoubleChocolate) +
+                (box4 * prijsBox4) +
+                (box6 * prijsBox6) +
+                (box10 * prijsBox10)
             )
             .toFixed(2)
             .replace(".", ",");
@@ -891,6 +1140,7 @@
 
         bericht +=
             "Telefoonnummer: " + telefoon + "\n\n";
+
 
         bericht +=
             "BESTELLING:\n";
@@ -923,20 +1173,50 @@
         }
 
 
+        if (box4 > 0) {
+
+            bericht +=
+                "📦 Box van 4: " +
+                box4 +
+                "x\n";
+        }
+
+
+        if (box6 > 0) {
+
+            bericht +=
+                "📦 Box van 6: " +
+                box6 +
+                "x\n";
+        }
+
+
+        if (box10 > 0) {
+
+            bericht +=
+                "🎁 Box van 10: " +
+                box10 +
+                "x\n";
+        }
+
+
         bericht +=
             "\nOphaaldatum: " +
             datum +
             "\n";
+
 
         bericht +=
             "Ophaaltijd: " +
             tijd +
             "\n";
 
+
         bericht +=
             "Totaal: €" +
             totaal +
             "\n\n";
+
 
         bericht +=
             "📍 Alleen ophalen";
