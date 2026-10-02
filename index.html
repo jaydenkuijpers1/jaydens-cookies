@@ -812,6 +812,20 @@ footer {
         flex-wrap: wrap;
     }
 }
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+    
 </style>
 </head>
 
@@ -921,9 +935,15 @@ footer {
 
         <h2>🍪 Onze cookies</h2>
 
-        <p>
-            Ontdek onze verse cookies in Kaatsheuvel
-        </p>
+<p>
+    </style verse cookies in Kaatsheuvel
+</p>
+
+<p style="max-width: 750px; margin: 20px auto 0; line-height: 1.7;">
+    Bij Jayden's Cookies kun je verse, zelfgemaakte cookies bestellen
+    in Kaatsheuvel. Kies uit Chocolate Chip, Smarties Cookie en
+    Double Chocolate, of stel je eigen cookiebox samen.
+</p>
 
     </div>
 
