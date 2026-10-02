@@ -178,22 +178,18 @@
         .cookie-card {
             background: white;
             border-radius: 20px;
-            padding: 20px;
+            padding: 18px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
         }
 
         .cookie-image {
             width: 100%;
-            height: 190px;
+            height: 220px;
             object-fit: cover;
             border-radius: 15px;
             margin-bottom: 15px;
-        }
-
-        .cookie-emoji {
-            font-size: 65px;
-            margin: 20px 0;
         }
 
         .cookie-card h3 {
@@ -440,41 +436,21 @@
         <div class="fresh-grid">
 
             <div class="fresh-card">
-
                 <div class="fresh-icon">🔥</div>
-
                 <h3>Vers gebakken</h3>
-
-                <p>
-                    Onze cookies worden vers gebakken.
-                </p>
-
+                <p>Onze cookies worden vers gebakken.</p>
             </div>
 
-
             <div class="fresh-card">
-
                 <div class="fresh-icon">❤️</div>
-
                 <h3>Met zorg gemaakt</h3>
-
-                <p>
-                    We maken iedere bestelling met aandacht.
-                </p>
-
+                <p>We maken iedere bestelling met aandacht.</p>
             </div>
 
-
             <div class="fresh-card">
-
                 <div class="fresh-icon">📦</div>
-
                 <h3>Klaar om op te halen</h3>
-
-                <p>
-                    Jouw bestelling staat klaar op de afgesproken tijd.
-                </p>
-
+                <p>Jouw bestelling staat klaar op de afgesproken tijd.</p>
             </div>
 
         </div>
@@ -497,9 +473,11 @@
 
         <div class="cookie-card">
 
-            <div class="cookie-emoji">
-                🍪
-            </div>
+            <img
+                class="cookie-image"
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
+                alt="Chocolate Chip Cookie"
+            >
 
             <h3>
                 Chocolate Chip
@@ -520,9 +498,11 @@
 
         <div class="cookie-card">
 
-            <div class="cookie-emoji">
-                🌈🍪
-            </div>
+            <img
+                class="cookie-image"
+                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
+                alt="Smarties Cookie"
+            >
 
             <h3>
                 Smarties Cookie
@@ -543,16 +523,18 @@
 
         <div class="cookie-card">
 
-            <div class="cookie-emoji">
-                🍫🍪
-            </div>
+            <img
+                class="cookie-image"
+                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
+                alt="Double Chocolate Cookie"
+            >
 
             <h3>
                 Double Chocolate
             </h3>
 
             <p>
-                Een extra chocolade cookie voor echte chocoladeliefhebbers.
+                Een extra chocoladecookie voor echte chocoladeliefhebbers.
             </p>
 
             <div class="price">
@@ -579,9 +561,7 @@
 
         <div class="order-item">
 
-            <h3>
-                🍪 Chocolate Chip
-            </h3>
+            <h3>🍪 Chocolate Chip</h3>
 
             <p>
                 <span class="order-price">€1,50</span> per cookie
@@ -606,9 +586,7 @@
 
         <div class="order-item">
 
-            <h3>
-                🌈 Smarties Cookie
-            </h3>
+            <h3>🌈 Smarties Cookie</h3>
 
             <p>
                 <span class="order-price">€1,50</span> per cookie
@@ -633,9 +611,7 @@
 
         <div class="order-item">
 
-            <h3>
-                🍫 Double Chocolate
-            </h3>
+            <h3>🍫 Double Chocolate</h3>
 
             <p>
                 <span class="order-price">€1,75</span> per cookie
@@ -655,8 +631,6 @@
 
         </div>
 
-
-        <!-- KLANTGEGEVENS -->
 
         <label for="naam">
             Naam
@@ -700,17 +674,10 @@
         >
 
 
-        <!-- TOTAAL -->
-
         <div class="total">
-
-            Totaal:
-            €<span id="totaal">0,00</span>
-
+            Totaal: €<span id="totaal">0,00</span>
         </div>
 
-
-        <!-- WHATSAPP -->
 
         <button
             class="whatsapp-button"
@@ -732,16 +699,11 @@
 
     <div class="info-grid">
 
-
         <div class="info-box">
 
-            <div class="info-icon">
-                📍
-            </div>
+            <div class="info-icon">📍</div>
 
-            <h3>
-                Alleen ophalen
-            </h3>
+            <h3>Alleen ophalen</h3>
 
             <p>
                 Bestellingen kunnen alleen worden opgehaald.
@@ -753,13 +715,9 @@
 
         <div class="info-box">
 
-            <div class="info-icon">
-                🕐
-            </div>
+            <div class="info-icon">🕐</div>
 
-            <h3>
-                Spreken we samen af
-            </h3>
+            <h3>Spreken we samen af</h3>
 
             <p>
                 Na je bestelling spreken we via WhatsApp
@@ -771,13 +729,9 @@
 
         <div class="info-box">
 
-            <div class="info-icon">
-                🍪
-            </div>
+            <div class="info-icon">🍪</div>
 
-            <h3>
-                Vers & lekker
-            </h3>
+            <h3>Vers & lekker</h3>
 
             <p>
                 Elke cookie wordt vers gebakken.
@@ -794,9 +748,7 @@
 
 <section id="contact">
 
-    <h2>
-        📱 Contact
-    </h2>
+    <h2>📱 Contact</h2>
 
     <div class="contact-box">
 
@@ -823,8 +775,6 @@
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
     <p>
@@ -840,14 +790,10 @@
 
 <script>
 
-    /* PRIJZEN */
-
     const prijsChocolateChip = 1.50;
     const prijsSmarties = 1.50;
     const prijsDoubleChocolate = 1.75;
 
-
-    /* TOTAAL BEREKENEN */
 
     function berekenTotaal() {
 
@@ -871,8 +817,6 @@
             totaal.toFixed(2).replace(".", ",");
     }
 
-
-    /* BESTELLING NAAR WHATSAPP */
 
     function verstuurBestelling() {
 
@@ -899,8 +843,6 @@
             document.getElementById("tijd").value;
 
 
-        /* CONTROLEREN OF ER MINSTENS 1 COOKIE IS */
-
         const totaalAantal =
             chocolateChip +
             smarties +
@@ -909,15 +851,11 @@
 
         if (totaalAantal === 0) {
 
-            alert(
-                "Kies eerst minstens 1 cookie."
-            );
+            alert("Kies eerst minstens 1 cookie.");
 
             return;
         }
 
-
-        /* CONTROLEREN OF ALLE GEGEVENS ZIJN INGEVULD */
 
         if (
             naam === "" ||
@@ -934,8 +872,6 @@
         }
 
 
-        /* TOTAAL */
-
         const totaal =
             (
                 (chocolateChip * prijsChocolateChip) +
@@ -946,8 +882,6 @@
             .replace(".", ",");
 
 
-        /* WHATSAPP BERICHT */
-
         let bericht =
             "🍪 NIEUWE BESTELLING - JAYDEN'S COOKIES 🍪\n\n";
 
@@ -957,7 +891,6 @@
 
         bericht +=
             "Telefoonnummer: " + telefoon + "\n\n";
-
 
         bericht +=
             "BESTELLING:\n";
@@ -995,24 +928,19 @@
             datum +
             "\n";
 
-
         bericht +=
             "Ophaaltijd: " +
             tijd +
             "\n";
-
 
         bericht +=
             "Totaal: €" +
             totaal +
             "\n\n";
 
-
         bericht +=
             "📍 Alleen ophalen";
 
-
-        /* WHATSAPP NUMMER */
 
         const whatsappNummer =
             "31619853623";
