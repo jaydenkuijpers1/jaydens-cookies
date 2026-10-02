@@ -37,7 +37,9 @@
             border-radius: 20px;
         }
 
-        /* FLOATING COOKIES */
+        /* =========================
+           FLOATING COOKIES
+        ========================= */
 
         .floating-cookie {
             position: fixed;
@@ -81,7 +83,9 @@
             }
         }
 
-        /* SPARKLES */
+        /* =========================
+           SPARKLES
+        ========================= */
 
         .sparkle {
             position: fixed;
@@ -103,7 +107,9 @@
             }
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: relative;
@@ -160,7 +166,9 @@
             }
         }
 
-        /* NAVIGATIE */
+        /* =========================
+           NAV
+        ========================= */
 
         nav {
             position: sticky;
@@ -193,7 +201,9 @@
             box-shadow: 0 6px 15px rgba(107, 62, 38, 0.25);
         }
 
-        /* SECTIES */
+        /* =========================
+           SECTIES
+        ========================= */
 
         section {
             position: relative;
@@ -231,7 +241,9 @@
             }
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             max-width: none;
@@ -333,7 +345,9 @@
             }
         }
 
-        /* COOKIE CARDS */
+        /* =========================
+           COOKIE CARDS
+        ========================= */
 
         .cookie-grid {
             display: grid;
@@ -348,15 +362,6 @@
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            animation: cardAppear 0.8s ease both;
-        }
-
-        .cookie-card:nth-child(2) {
-            animation-delay: 0.15s;
-        }
-
-        .cookie-card:nth-child(3) {
-            animation-delay: 0.3s;
         }
 
         .cookie-card:hover {
@@ -414,7 +419,9 @@
             color: #a45b32;
         }
 
-        /* VERS */
+        /* =========================
+           VERS GEBAKKEN
+        ========================= */
 
         .fresh-card {
             background: white;
@@ -462,7 +469,9 @@
             z-index: 2;
         }
 
-        /* BOXEN */
+        /* =========================
+           COOKIEBOXEN
+        ========================= */
 
         .box-grid {
             display: grid;
@@ -495,9 +504,9 @@
             color: #a45b32;
         }
 
-        /* ==================================
-           NIEUW BESTELGEDEELTE
-        ================================== */
+        /* =========================
+           BESTELGEDEELTE
+        ========================= */
 
         .order-wrapper {
             background: linear-gradient(
@@ -535,7 +544,7 @@
             color: #806456;
         }
 
-        /* COOKIE BESTELKAARTEN */
+        /* LOSSE COOKIES */
 
         .order-cookie-grid {
             display: grid;
@@ -547,7 +556,6 @@
         }
 
         .order-cookie {
-            position: relative;
             background: #fff8ef;
             border: 2px solid #ead9c8;
             border-radius: 22px;
@@ -582,7 +590,7 @@
             margin-bottom: 15px;
         }
 
-        /* AANTAL KNOPPEN */
+        /* QUANTITY */
 
         .quantity-control {
             display: flex;
@@ -620,7 +628,9 @@
             color: #6b3e26;
         }
 
-        /* BOX BESTELLING */
+        /* =========================
+           BOXEN KIEZEN
+        ========================= */
 
         .order-section-title {
             display: flex;
@@ -634,7 +644,7 @@
         .order-box-grid {
             display: grid;
             grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
+                repeat(auto-fit, minmax(250px, 1fr));
 
             gap: 20px;
         }
@@ -660,7 +670,7 @@
             margin-bottom: 5px;
         }
 
-        .order-box-card p {
+        .order-box-card > p {
             color: #806456;
             margin-bottom: 15px;
         }
@@ -671,8 +681,6 @@
             font-size: 19px;
         }
 
-        /* BOX AANTAL */
-
         .box-amount {
             display: flex;
             justify-content: space-between;
@@ -682,7 +690,94 @@
             border-top: 1px solid #ead9c8;
         }
 
-        /* KLANTGEGEVENS */
+        /* BOX COOKIE KEUZE */
+
+        .box-cookie-selection {
+            display: none;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 2px dashed #ead9c8;
+            animation: slideDown 0.35s ease;
+        }
+
+        .box-cookie-selection.active {
+            display: block;
+        }
+
+        .box-cookie-selection-title {
+            font-weight: bold;
+            color: #6b3e26;
+            margin-bottom: 12px;
+        }
+
+        .box-cookie-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 10px 12px;
+            border-radius: 12px;
+            margin: 8px 0;
+        }
+
+        .box-cookie-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .box-cookie-row .quantity-control {
+            gap: 7px;
+        }
+
+        .box-cookie-row .quantity-button {
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+        }
+
+        .box-cookie-row .quantity-number {
+            min-width: 24px;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .box-status {
+            margin-top: 14px;
+            padding: 10px;
+            border-radius: 10px;
+            background: #f5e3d1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .box-status.good {
+            background: #dff5e7;
+            color: #208044;
+        }
+
+        .box-status.bad {
+            background: #fff0e8;
+            color: #a34b27;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           KLANTGEGEVENS
+        ========================= */
 
         .customer-section {
             margin-top: 35px;
@@ -712,10 +807,6 @@
             flex-direction: column;
         }
 
-        .input-group.full {
-            grid-column: 1 / -1;
-        }
-
         .input-group label {
             font-weight: bold;
             margin-bottom: 7px;
@@ -740,7 +831,9 @@
             transform: scale(1.01);
         }
 
-        /* TOTAAL */
+        /* =========================
+           TOTAAL
+        ========================= */
 
         .total-box {
             margin-top: 30px;
@@ -752,7 +845,6 @@
 
             color: white;
             padding: 25px;
-
             border-radius: 22px;
 
             display: flex;
@@ -789,7 +881,9 @@
             }
         }
 
-        /* WHATSAPP */
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .whatsapp-button {
             width: 100%;
@@ -829,7 +923,9 @@
             transform: scale(0.97);
         }
 
-        /* INFO */
+        /* =========================
+           INFO
+        ========================= */
 
         .info-box {
             background: white;
@@ -850,7 +946,9 @@
             font-size: 18px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             position: relative;
@@ -885,7 +983,9 @@
             }
         }
 
-        /* REVEAL */
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
 
         .reveal {
             opacity: 0;
@@ -900,7 +1000,9 @@
             transform: translateY(0);
         }
 
-        /* ANIMATIES */
+        /* =========================
+           KEYFRAMES
+        ========================= */
 
         @keyframes headerIn {
             from {
@@ -964,18 +1066,6 @@
             }
         }
 
-        @keyframes cardAppear {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @keyframes cookieBounce {
             0%, 100% {
                 transform: translateY(0);
@@ -1010,7 +1100,9 @@
             }
         }
 
-        /* MOBIEL */
+        /* =========================
+           MOBIEL
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -1051,10 +1143,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .input-group.full {
-                grid-column: auto;
-            }
-
             .total-box {
                 flex-direction: column;
                 gap: 8px;
@@ -1064,13 +1152,17 @@
             .total-price {
                 font-size: 28px;
             }
+
+            .box-cookie-row {
+                padding: 9px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- FLOATING COOKIES -->
+    <!-- FLOATING DECORATIE -->
 
     <div class="floating-cookie one">🍪</div>
     <div class="floating-cookie two">🍫</div>
@@ -1138,13 +1230,17 @@
 
     <section id="vers" class="reveal">
 
-        <h2>🔥 Vers gebakken</h2>
+        <h2>
+            🔥 Vers gebakken
+        </h2>
 
         <div class="cookie-grid">
 
             <div class="fresh-card">
 
-                <div class="fresh-icon">🍪</div>
+                <div class="fresh-icon">
+                    🍪
+                </div>
 
                 <h3>
                     Vers uit de oven
@@ -1160,7 +1256,9 @@
 
             <div class="fresh-card">
 
-                <div class="fresh-icon">🍫</div>
+                <div class="fresh-icon">
+                    🍫
+                </div>
 
                 <h3>
                     Vol met lekkers
@@ -1176,7 +1274,9 @@
 
             <div class="fresh-card">
 
-                <div class="fresh-icon">❤️</div>
+                <div class="fresh-icon">
+                    ❤️
+                </div>
 
                 <h3>
                     Met liefde gemaakt
@@ -1198,9 +1298,12 @@
 
     <section id="cookies" class="reveal">
 
-        <h2>🍪 Onze Cookies</h2>
+        <h2>
+            🍪 Onze Cookies
+        </h2>
 
         <div class="cookie-grid">
+
 
             <div class="cookie-card">
 
@@ -1291,13 +1394,17 @@
 
     <section id="boxen" class="reveal">
 
-        <h2>📦 Cookieboxen</h2>
+        <h2>
+            📦 Cookieboxen
+        </h2>
 
         <div class="box-grid">
 
             <div class="box-card">
 
-                <h3>Box van 4</h3>
+                <h3>
+                    Box van 4
+                </h3>
 
                 <p>
                     4 cookies naar keuze
@@ -1312,7 +1419,9 @@
 
             <div class="box-card">
 
-                <h3>Box van 6</h3>
+                <h3>
+                    Box van 6
+                </h3>
 
                 <p>
                     6 cookies naar keuze
@@ -1327,7 +1436,9 @@
 
             <div class="box-card">
 
-                <h3>Box van 10</h3>
+                <h3>
+                    Box van 10
+                </h3>
 
                 <p>
                     10 cookies naar keuze
@@ -1344,17 +1455,20 @@
     </section>
 
 
-    <!-- ==========================
-         NIEUW BESTELGEDEELTE
-    =========================== -->
+    <!-- =========================
+         BESTELLEN
+    ========================= -->
 
     <section id="bestellen" class="reveal">
 
-        <h2>🛒 Bestel jouw cookies</h2>
+        <h2>
+            🛒 Bestel jouw cookies
+        </h2>
 
         <div class="order-wrapper">
 
             <div class="order-box">
+
 
                 <div class="order-intro">
 
@@ -1363,8 +1477,8 @@
                     </h3>
 
                     <p>
-                        Kies hieronder hoeveel cookies
-                        je wilt hebben.
+                        Kies losse cookies of maak
+                        jouw eigen Cookiebox.
                     </p>
 
                 </div>
@@ -1509,11 +1623,12 @@
                 </div>
 
 
-                <!-- BOXEN -->
+                <!-- COOKIEBOXEN -->
 
                 <h3 class="order-section-title">
-                    📦 Kies een Cookiebox
+                    📦 Maak jouw Cookiebox
                 </h3>
+
 
                 <div class="order-box-grid">
 
@@ -1534,17 +1649,18 @@
                             €5,50
                         </div>
 
+
                         <div class="box-amount">
 
                             <span>
-                                Aantal
+                                Aantal boxen
                             </span>
 
                             <div class="quantity-control">
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box4', -1)"
+                                    onclick="veranderBoxAantal(4, -1)"
                                 >
                                     −
                                 </button>
@@ -1558,11 +1674,133 @@
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box4', 1)"
+                                    onclick="veranderBoxAantal(4, 1)"
                                 >
                                     +
                                 </button>
 
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="box-cookie-selection"
+                            id="selectionBox4"
+                        >
+
+                            <div class="box-cookie-selection-title">
+                                🍪 Kies de koekjes:
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Chocolate Chip
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'chocolate', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box4ChocolateDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'chocolate', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Smarties
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'smarties', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box4SmartiesDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'smarties', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Double Chocolate
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'double', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box4DoubleDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(4, 'double', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="box-status bad"
+                                id="box4Status"
+                            >
+                                0 / 4 cookies gekozen
                             </div>
 
                         </div>
@@ -1586,17 +1824,18 @@
                             €8,00
                         </div>
 
+
                         <div class="box-amount">
 
                             <span>
-                                Aantal
+                                Aantal boxen
                             </span>
 
                             <div class="quantity-control">
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box6', -1)"
+                                    onclick="veranderBoxAantal(6, -1)"
                                 >
                                     −
                                 </button>
@@ -1610,11 +1849,133 @@
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box6', 1)"
+                                    onclick="veranderBoxAantal(6, 1)"
                                 >
                                     +
                                 </button>
 
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="box-cookie-selection"
+                            id="selectionBox6"
+                        >
+
+                            <div class="box-cookie-selection-title">
+                                🍪 Kies de koekjes:
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Chocolate Chip
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'chocolate', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box6ChocolateDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'chocolate', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Smarties
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'smarties', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box6SmartiesDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'smarties', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Double Chocolate
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'double', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box6DoubleDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(6, 'double', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="box-status bad"
+                                id="box6Status"
+                            >
+                                0 / 6 cookies gekozen
                             </div>
 
                         </div>
@@ -1638,17 +1999,18 @@
                             €13,00
                         </div>
 
+
                         <div class="box-amount">
 
                             <span>
-                                Aantal
+                                Aantal boxen
                             </span>
 
                             <div class="quantity-control">
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box10', -1)"
+                                    onclick="veranderBoxAantal(10, -1)"
                                 >
                                     −
                                 </button>
@@ -1662,11 +2024,133 @@
 
                                 <button
                                     class="quantity-button"
-                                    onclick="veranderAantal('box10', 1)"
+                                    onclick="veranderBoxAantal(10, 1)"
                                 >
                                     +
                                 </button>
 
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="box-cookie-selection"
+                            id="selectionBox10"
+                        >
+
+                            <div class="box-cookie-selection-title">
+                                🍪 Kies de koekjes:
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Chocolate Chip
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'chocolate', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box10ChocolateDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'chocolate', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Smarties
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'smarties', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box10SmartiesDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'smarties', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="box-cookie-row">
+
+                                <span class="box-cookie-name">
+                                    Double Chocolate
+                                </span>
+
+                                <div class="quantity-control">
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'double', -1)"
+                                    >
+                                        −
+                                    </button>
+
+                                    <span
+                                        class="quantity-number"
+                                        id="box10DoubleDisplay"
+                                    >
+                                        0
+                                    </span>
+
+                                    <button
+                                        class="quantity-button"
+                                        onclick="veranderBoxCookie(10, 'double', 1)"
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="box-status bad"
+                                id="box10Status"
+                            >
+                                0 / 10 cookies gekozen
                             </div>
 
                         </div>
@@ -1691,7 +2175,6 @@
 
 
                     <div class="customer-grid">
-
 
                         <div class="input-group">
 
@@ -1790,7 +2273,9 @@
 
     <section id="ophalen" class="reveal">
 
-        <h2>📍 Ophalen</h2>
+        <h2>
+            📍 Ophalen
+        </h2>
 
         <div class="info-box">
 
@@ -1821,7 +2306,9 @@
 
     <section id="contact" class="reveal">
 
-        <h2>📞 Contact</h2>
+        <h2>
+            📞 Contact
+        </h2>
 
         <div class="info-box">
 
@@ -1863,6 +2350,10 @@
     </footer>
 
 
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
 
         /* =========================
@@ -1887,28 +2378,66 @@
 
 
         /* =========================
-           AANTALLEN
+           BESTELLING
         ========================= */
 
-        const aantallen = {
+        const bestelling = {
 
-            chocolateChip: 0,
+            losseCookies: {
 
-            smarties: 0,
+                chocolateChip: 0,
 
-            doubleChocolate: 0,
+                smarties: 0,
 
-            box4: 0,
+                doubleChocolate: 0
 
-            box6: 0,
+            },
 
-            box10: 0
+            boxen: {
+
+                4: {
+
+                    aantal: 0,
+
+                    chocolate: 0,
+
+                    smarties: 0,
+
+                    double: 0
+
+                },
+
+                6: {
+
+                    aantal: 0,
+
+                    chocolate: 0,
+
+                    smarties: 0,
+
+                    double: 0
+
+                },
+
+                10: {
+
+                    aantal: 0,
+
+                    chocolate: 0,
+
+                    smarties: 0,
+
+                    double: 0
+
+                }
+
+            }
 
         };
 
 
         /* =========================
-           AANTAL VERANDEREN
+           LOSSE COOKIE AANTAL
         ========================= */
 
         function veranderAantal(
@@ -1916,49 +2445,24 @@
             verandering
         ) {
 
-            aantallen[product] += verandering;
+            bestelling.losseCookies[product] +=
+                verandering;
 
 
-            if (aantallen[product] < 0) {
+            if (
+                bestelling.losseCookies[product] < 0
+            ) {
 
-                aantallen[product] = 0;
+                bestelling.losseCookies[product] = 0;
 
             }
 
 
-            const display =
-                document.getElementById(
-                    "display" +
-                    hoofdletterEersteLetter(product)
-                );
-
-
-            display.textContent =
-                aantallen[product];
-
-
-            display.animate(
-
-                [
-                    {
-                        transform: "scale(1)"
-                    },
-
-                    {
-                        transform: "scale(1.35)"
-                    },
-
-                    {
-                        transform: "scale(1)"
-                    }
-
-                ],
-
-                {
-                    duration: 250
-                }
-
-            );
+            document.getElementById(
+                "display" +
+                hoofdletterEersteLetter(product)
+            ).textContent =
+                bestelling.losseCookies[product];
 
 
             berekenTotaal();
@@ -1967,21 +2471,321 @@
 
 
         /* =========================
-           HOOFDLETTER
+           BOX AANTAL
         ========================= */
 
-        function hoofdletterEersteLetter(
-            tekst
+        function veranderBoxAantal(
+            box,
+            verandering
         ) {
 
-            return tekst.charAt(0).toUpperCase()
-                + tekst.slice(1);
+            const oudeAantal =
+                bestelling.boxen[box].aantal;
+
+
+            bestelling.boxen[box].aantal +=
+                verandering;
+
+
+            if (
+                bestelling.boxen[box].aantal < 0
+            ) {
+
+                bestelling.boxen[box].aantal = 0;
+
+            }
+
+
+            const nieuwAantal =
+                bestelling.boxen[box].aantal;
+
+
+            /*
+
+            Als het aantal boxen kleiner wordt,
+            passen we de gekozen koekjes aan.
+
+            */
+
+            const maximum =
+                nieuwAantal * box;
+
+
+            const totaalGekozen =
+                getBoxCookieAantal(box);
+
+
+            if (
+                totaalGekozen > maximum
+            ) {
+
+                verwijderOvertolligeCookies(
+                    box,
+                    totaalGekozen - maximum
+                );
+
+            }
+
+
+            document.getElementById(
+                "displayBox" + box
+            ).textContent =
+                nieuwAantal;
+
+
+            const selection =
+                document.getElementById(
+                    "selectionBox" + box
+                );
+
+
+            if (
+                nieuwAantal > 0
+            ) {
+
+                selection.classList.add(
+                    "active"
+                );
+
+            } else {
+
+                selection.classList.remove(
+                    "active"
+                );
+
+
+                bestelling.boxen[box].chocolate = 0;
+
+                bestelling.boxen[box].smarties = 0;
+
+                bestelling.boxen[box].double = 0;
+
+                updateBoxDisplays(box);
+
+            }
+
+
+            updateBoxStatus(box);
+
+            berekenTotaal();
 
         }
 
 
         /* =========================
-           TOTAAL
+           COOKIE IN BOX VERANDEREN
+        ========================= */
+
+        function veranderBoxCookie(
+            box,
+            cookie,
+            verandering
+        ) {
+
+            const huidigeWaarde =
+                bestelling.boxen[box][cookie];
+
+
+            const nieuwAantal =
+                huidigeWaarde +
+                verandering;
+
+
+            if (
+                nieuwAantal < 0
+            ) {
+
+                return;
+
+            }
+
+
+            const totaalNaVerandering =
+                getBoxCookieAantal(box) +
+                verandering;
+
+
+            const maximum =
+                bestelling.boxen[box].aantal *
+                box;
+
+
+            if (
+                totaalNaVerandering > maximum
+            ) {
+
+                return;
+
+            }
+
+
+            bestelling.boxen[box][cookie] =
+                nieuwAantal;
+
+
+            updateBoxDisplays(box);
+
+            updateBoxStatus(box);
+
+            berekenTotaal();
+
+        }
+
+
+        /* =========================
+           TOTAAL COOKIES IN BOX
+        ========================= */
+
+        function getBoxCookieAantal(box) {
+
+            return (
+
+                bestelling.boxen[box].chocolate +
+
+                bestelling.boxen[box].smarties +
+
+                bestelling.boxen[box].double
+
+            );
+
+        }
+
+
+        /* =========================
+           DISPLAY UPDATEN
+        ========================= */
+
+        function updateBoxDisplays(box) {
+
+            document.getElementById(
+                "box" +
+                box +
+                "ChocolateDisplay"
+            ).textContent =
+                bestelling.boxen[box].chocolate;
+
+
+            document.getElementById(
+                "box" +
+                box +
+                "SmartiesDisplay"
+            ).textContent =
+                bestelling.boxen[box].smarties;
+
+
+            document.getElementById(
+                "box" +
+                box +
+                "DoubleDisplay"
+            ).textContent =
+                bestelling.boxen[box].double;
+
+        }
+
+
+        /* =========================
+           STATUS VAN BOX
+        ========================= */
+
+        function updateBoxStatus(box) {
+
+            const gekozen =
+                getBoxCookieAantal(box);
+
+
+            const maximum =
+                bestelling.boxen[box].aantal *
+                box;
+
+
+            const status =
+                document.getElementById(
+                    "box" +
+                    box +
+                    "Status"
+                );
+
+
+            if (
+                bestelling.boxen[box].aantal === 0
+            ) {
+
+                status.textContent =
+                    "Kies eerst hoeveel boxen je wilt.";
+
+                status.className =
+                    "box-status bad";
+
+                return;
+
+            }
+
+
+            status.textContent =
+                gekozen +
+                " / " +
+                maximum +
+                " cookies gekozen";
+
+
+            if (
+                gekozen === maximum
+            ) {
+
+                status.textContent +=
+                    " ✅";
+
+                status.className =
+                    "box-status good";
+
+            } else {
+
+                status.className =
+                    "box-status bad";
+
+            }
+
+        }
+
+
+        /* =========================
+           OVERTOLLIGE COOKIES
+        ========================= */
+
+        function verwijderOvertolligeCookies(
+            box,
+            aantal
+        ) {
+
+            const cookies = [
+                "double",
+                "smarties",
+                "chocolate"
+            ];
+
+
+            for (
+                const cookie of cookies
+            ) {
+
+                while (
+                    aantal > 0 &&
+                    bestelling.boxen[box][cookie] > 0
+                ) {
+
+                    bestelling.boxen[box][cookie]--;
+
+                    aantal--;
+
+                }
+
+            }
+
+        }
+
+
+        /* =========================
+           TOTAAL BEREKENEN
         ========================= */
 
         function berekenTotaal() {
@@ -1990,32 +2794,32 @@
 
 
             totaal +=
-                aantallen.chocolateChip *
+                bestelling.losseCookies.chocolateChip *
                 prijzen.chocolateChip;
 
 
             totaal +=
-                aantallen.smarties *
+                bestelling.losseCookies.smarties *
                 prijzen.smarties;
 
 
             totaal +=
-                aantallen.doubleChocolate *
+                bestelling.losseCookies.doubleChocolate *
                 prijzen.doubleChocolate;
 
 
             totaal +=
-                aantallen.box4 *
+                bestelling.boxen[4].aantal *
                 prijzen.box4;
 
 
             totaal +=
-                aantallen.box6 *
+                bestelling.boxen[6].aantal *
                 prijzen.box6;
 
 
             totaal +=
-                aantallen.box10 *
+                bestelling.boxen[10].aantal *
                 prijzen.box10;
 
 
@@ -2030,32 +2834,91 @@
 
 
         /* =========================
-           WHATSAPP
+           BESTELLING VERSTUREN
         ========================= */
 
         function verstuurBestelling() {
 
+            const boxen = [4, 6, 10];
+
+
+            /* CONTROLEREN OF BOXEN VOL ZIJN */
+
+            for (
+                const box of boxen
+            ) {
+
+                const aantalBoxen =
+                    bestelling.boxen[box].aantal;
+
+
+                if (
+                    aantalBoxen > 0
+                ) {
+
+                    const gekozen =
+                        getBoxCookieAantal(box);
+
+
+                    const nodig =
+                        aantalBoxen * box;
+
+
+                    if (
+                        gekozen !== nodig
+                    ) {
+
+                        alert(
+                            "📦 Bij de Box van " +
+                            box +
+                            " moet je nog precies " +
+                            (nodig - gekozen) +
+                            " cookie(s) kiezen."
+                        );
+
+                        return;
+
+                    }
+
+                }
+
+            }
+
+
             const totaal =
-                aantallen.chocolateChip *
-                prijzen.chocolateChip +
 
-                aantallen.smarties *
-                prijzen.smarties +
+                bestelling.losseCookies.chocolateChip *
+                prijzen.chocolateChip
 
-                aantallen.doubleChocolate *
-                prijzen.doubleChocolate +
+                +
 
-                aantallen.box4 *
-                prijzen.box4 +
+                bestelling.losseCookies.smarties *
+                prijzen.smarties
 
-                aantallen.box6 *
-                prijzen.box6 +
+                +
 
-                aantallen.box10 *
+                bestelling.losseCookies.doubleChocolate *
+                prijzen.doubleChocolate
+
+                +
+
+                bestelling.boxen[4].aantal *
+                prijzen.box4
+
+                +
+
+                bestelling.boxen[6].aantal *
+                prijzen.box6
+
+                +
+
+                bestelling.boxen[10].aantal *
                 prijzen.box10;
 
 
-            if (totaal === 0) {
+            if (
+                totaal === 0
+            ) {
 
                 alert(
                     "🍪 Kies eerst wat je wilt bestellen!"
@@ -2140,74 +3003,84 @@
                 "🍪 BESTELLING:\n";
 
 
+            /* LOSSE COOKIES */
+
             if (
-                aantallen.chocolateChip > 0
+                bestelling.losseCookies.chocolateChip > 0
             ) {
 
                 bericht +=
                     "🍪 Chocolate Chip: " +
-                    aantallen.chocolateChip +
+                    bestelling.losseCookies.chocolateChip +
                     "\n";
 
             }
 
 
             if (
-                aantallen.smarties > 0
+                bestelling.losseCookies.smarties > 0
             ) {
 
                 bericht +=
                     "🌈 Smarties Cookie: " +
-                    aantallen.smarties +
+                    bestelling.losseCookies.smarties +
                     "\n";
 
             }
 
 
             if (
-                aantallen.doubleChocolate > 0
+                bestelling.losseCookies.doubleChocolate > 0
             ) {
 
                 bericht +=
                     "🍫 Double Chocolate: " +
-                    aantallen.doubleChocolate +
+                    bestelling.losseCookies.doubleChocolate +
                     "\n";
 
             }
 
 
-            if (
-                aantallen.box4 > 0
+            /* BOXEN */
+
+            for (
+                const box of boxen
             ) {
 
-                bericht +=
-                    "📦 Box van 4: " +
-                    aantallen.box4 +
-                    "\n";
-
-            }
+                const aantalBoxen =
+                    bestelling.boxen[box].aantal;
 
 
-            if (
-                aantallen.box6 > 0
-            ) {
+                if (
+                    aantalBoxen > 0
+                ) {
 
-                bericht +=
-                    "📦 Box van 6: " +
-                    aantallen.box6 +
-                    "\n";
+                    bericht +=
+                        "\n📦 Box van " +
+                        box +
+                        " (" +
+                        aantalBoxen +
+                        "x):\n";
 
-            }
+
+                    bericht +=
+                        "🍪 Chocolate Chip: " +
+                        bestelling.boxen[box].chocolate +
+                        "\n";
 
 
-            if (
-                aantallen.box10 > 0
-            ) {
+                    bericht +=
+                        "🌈 Smarties: " +
+                        bestelling.boxen[box].smarties +
+                        "\n";
 
-                bericht +=
-                    "📦 Box van 10: " +
-                    aantallen.box10 +
-                    "\n";
+
+                    bericht +=
+                        "🍫 Double Chocolate: " +
+                        bestelling.boxen[box].double +
+                        "\n";
+
+                }
 
             }
 
@@ -2242,7 +3115,23 @@
 
 
         /* =========================
-           SCROLL ANIMATIES
+           HOOFDLETTER
+        ========================= */
+
+        function hoofdletterEersteLetter(
+            tekst
+        ) {
+
+            return (
+                tekst.charAt(0).toUpperCase() +
+                tekst.slice(1)
+            );
+
+        }
+
+
+        /* =========================
+           SCROLL REVEAL
         ========================= */
 
         const revealElements =
@@ -2297,7 +3186,7 @@
 
 
         /* =========================
-           KLIK SPARKLES
+           SPARKLES
         ========================= */
 
         document.addEventListener(
@@ -2443,7 +3332,8 @@
                         {
                             duration:
                                 1800 +
-                                Math.random() * 1500,
+                                Math.random() *
+                                1500,
 
                             easing:
                                 "cubic-bezier(.2,.8,.3,1)"
@@ -2454,7 +3344,9 @@
 
                 animation.onfinish =
                     () => {
+
                         item.remove();
+
                     };
 
             }
